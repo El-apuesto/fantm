@@ -22,7 +22,17 @@ import {
   Heart,
   Compass,
   Anchor,
-  Rocket
+  Rocket,
+  Zap,
+  Code,
+  Coffee,
+  Music,
+  Camera,
+  Palette,
+  Lightbulb,
+  Target,
+  Trophy,
+  Shield
 } from 'lucide-react';
 
 // 20 different logo icons that rotate on each session/page refresh
