@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: fantmink-api
+    runtime: node
+    plan: standard
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: GROK_API_KEY
+        sync: false
+      - key: SQUARE_ACCESS_TOKEN
+        sync: false
+      - key: SQUARE_ENVIRONMENT
+        value: production
+      - key: SQUARE_LOCATION_ID
+        sync: false
+      - key: FRONTEND_URL
+        value: https://fantm.ink
+    healthCheckPath: /health
+    autoDeploy: true

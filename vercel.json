@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "fantm-ink-frontend",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "@supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase-anon-key",
+    "VITE_API_URL": "@api-url",
+    "VITE_SQUARE_APP_ID": "@square-app-id",
+    "VITE_SQUARE_ENVIRONMENT": "@square-environment"
+  }
+}
